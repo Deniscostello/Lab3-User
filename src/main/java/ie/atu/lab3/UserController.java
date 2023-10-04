@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    private UserService= us;
+    private UserService us;
+
+    @Autowired
+    public void ConstuctorInjectedService(UserService us){
+        this.us= us;
+    }
 
 
 
